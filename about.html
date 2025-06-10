@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Mini Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .language-selector select {
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="BuyImg.png" alt="Logo" class="logo" />
+    <span><strong>HAHA_IWACU</strong></span>
+    <div class="language-selector">
+      <select id="language" onchange="translateContent()">
+        <option value="en">English</option>
+        <option value="rw">Kinyarwanda</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+    <a href="home.html">Home</a>
+  </header>
+
+  <main>
+    <h1 id="title">About Us</h1>
+    <p id="desc">
+      Welcome to HAHA_IWACU! We are dedicated to bringing you the best local and imported products at affordable prices. Our goal is to make shopping easy, fast, and enjoyable.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 HAHA_IWACU. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "About Us",
+        desc: "Welcome to HAHA_IWACU! We are dedicated to bringing you the best local and imported products at affordable prices. Our goal is to make shopping easy, fast, and enjoyable."
+      },
+      rw: {
+        title: "IBYERECYEYE HAHA_IWACU",
+        desc: "Murakaza neza muri HAHA_IWACU! Twiyemeje kubagezaho ibicuruzwa byiza byo mu gihugu n'ibyo hanze ku giciro cyiza. Intego yacu ni ugutuma guhaha biba byoroshye, vuba kandi bishimishije."
+      },
+      fr: {
+        title: "À Propos de Nous",
+        desc: "Bienvenue chez HAHA_IWACU! Nous nous engageons à vous offrir les meilleurs produits locaux et importés à des prix abordables. Notre objectif est de rendre vos achats simples, rapides et agréables."
+      }
+    };
+
+    function translateContent() {
+      const lang = document.getElementById("language").value;
+      document.getElementById("title").textContent = translations[lang].title;
+      document.getElementById("desc").textContent = translations[lang].desc;
+    }
+  </script>
+</body>
+</html>

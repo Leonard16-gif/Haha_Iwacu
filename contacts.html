@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - HAHA_IWACU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: #333;
+    }
+
+    header {
+      background-color: green;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .contact-info {
+      background-color: whitesmoke;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+  </style>
+  <script>
+    function changeLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => el.style.display = "none");
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => el.style.display = "block");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      changeLanguage("en");
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>HAHA_IWACU</h1>
+    <select onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="rw">Kinyarwanda</option>
+      <option value="fr">Français</option>
+    </select>
+    <a href="home.html">Home</a>
+  </header>
+
+  <section>
+    <div class="contact-info" data-lang="en">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="email:umucunguzileonard@gmail.com">umucunguzileonard.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/250780904158" target="_blank">+250 780904158</a></p>
+      <p>We are here to assist you in selling, renting, or buying any of the listed items with ease.</p>
+    </div>
+
+    <div class="contact-info hidden" data-lang="rw">
+      <h2>Twandikire</h2>
+      <p>Email: <a href="email:umucunguzileonard.com">umucunguzileonard@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/250780904158" target="_blank">+250780904158</a></p>
+      <p>Turahari ngo tugufashe kugurisha, gukodesha cyangwa kugura ibintu byashyizwe kuri urubuga.</p>
+    </div>
+
+    <div class="contact-info hidden" data-lang="fr">
+      <h2>Contactez-nous</h2>
+      <p>Email : <a href="email:umucunguzileonard@gmail.com">umucunguzileonard@gmail.com</a></p>
+      <p>WhatsApp : <a href="https://wa.me/250780904158" target="_blank">+250780904158</a></p>
+      <p>Nous sommes là pour vous aider à vendre, louer ou acheter facilement les produits listés.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HAHA_IWACU. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
